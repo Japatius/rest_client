@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="user.js"></script>
+    <link rel="stylesheet" href="user.css">
+    <title>RestCLIENT</title>
+</head>
+
+<body>
+    <h1>User data</h1>
+    <h2>Users</h2>
+    <button id="usrbtn" onclick="GetUsers()">Get All Users</button>
+    <button id="naebtn" onclick="NamesEmails()">Show name and email</button>
+    <h2>Add User</h2>
+    <form id="UserForm">
+    <label for="">ID</label>
+    <br>
+    <input type="number" name="id" id="">
+        <br>
+    <label for="">Name</label>
+    <br>
+    <input type="text" name="name" id="">
+    <br>
+    <label for="">Email</label>
+    <br>
+    <input type="text" name="email" id="">
+    <br>
+    <label for="">Fact</label>
+    <br>
+    <input type="text" name="fact" id="">
+    </form>
+    <button id="addbtn" onclick="AddUser()">Add User</button>
+
+    <h2>Update User</h2>
+    <label for="">ID</label>
+    <br>
+    <input type="number" id="update_id">
+    <br>
+    <label for="">Name</label>
+    <br>
+    <input type="text" id="update_name">
+    <br>
+    <label for="">Email</label>
+    <br>
+    <input type="text" id="update_email">
+    <br>
+    <label for="">Fact</label>
+    <br>
+    <input type="text" id="update_id">
+    <br>
+    <button id="upbtn"onclick="UpdateUser()">Update User</button>
+    <div id='results'></div>
+</body>
+</html>
