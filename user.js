@@ -43,23 +43,24 @@ function AddUser(){
     };
     xhttp.send(formData);
 }
-function UpdateUser(){
-    var url = "http://localhost/rest_api/index.php/api/user/users.html";
+function UpdateUser() {
+    var url = 'http://localhost/rest_api/index.php/api/user/users.html';
     var xhttp = new XMLHttpRequest();
     xhttp.open('PUT', url, true);
-    var data ={};
+    var data = {};
     data.id = parseInt(document.getElementById('update_id').value);
     data.name = document.getElementById('update_name').value;
     data.email = document.getElementById('update_email').value;
     data.fact = document.getElementById('update_fact').value;
-    
+  
     var jsonData = JSON.stringify(data);
-    xhttp.onreadystatechange = function(){
-        if(xhttp.readyState == 4 && xhttp.status == 201){
-            document.getElementById('results').innerHTML = "User updated successfully";
-        }else{
-            document.getElementById('results').innerHTML = "Something went wrong";
-        }
+    xhttp.onreadystatechange = function() {
+      if (xhttp.readyState == 4 && xhttp.status == 201) {
+        document.getElementById('results').innerHTML = 'User updated succesfully';
+      } else {
+        document.getElementById('results').innerHTML = 'Something went wrong';
+      }
     };
+    xhttp.setRequestHeader('Content-type', 'application/json; charset=utf-8');
     xhttp.send(jsonData);
-}
+  }
